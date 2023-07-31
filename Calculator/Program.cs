@@ -7,7 +7,6 @@
             Console.WriteLine("Welcome to the Basic Calculator!");
             Console.WriteLine();
 
-            var operators = new List<string> { "+", "-", "/", "*" };
             while (true)
             {
                 double num1, num2;
@@ -23,17 +22,20 @@
                     }
                 } while (!validNum1);
 
+                var operators = new List<string> { "+", "-", "/", "*" };
+                var operatorsString = string.Join(" ", operators);
+
                 string operation;
                 do
                 {
-                    Console.Write(@"Enter the operator. You can choose from: ""+"" ""-"" ""/"" ""*"": ");
+                    Console.Write($"Enter the operator. You can choose from: {operatorsString}: ");
                     operation = Console.ReadLine();
                     if (!operators.Contains(operation))
                     {
                         Console.WriteLine("Invalid operator. Enter a valid operator.");
                     }
                 } while (!operators.Contains(operation));
-
+                
                 do
                 {
                     Console.Write("Enter the second number: ");
