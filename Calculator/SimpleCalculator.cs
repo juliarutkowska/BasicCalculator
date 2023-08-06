@@ -12,17 +12,17 @@ public class SimpleCalculator
         while (true)
         {
             double num1, num2;
-            bool validNum1, validNum2;
+            bool isValid1, isValid2;
 
             do
             {
                 Console.Write("Enter the first number: ");
-                validNum1 = double.TryParse(Console.ReadLine(), out num1);
-                if (!validNum1)
+                isValid1 = double.TryParse(Console.ReadLine(), out num1);
+                if (!isValid1)
                 {
                     Console.WriteLine("Invalid input. Please enter a valid number.");
                 }
-            } while (!validNum1);
+            } while (!isValid1);
 
             var operators = new List<string> { "+", "-", "/", "*" };
             var operatorsString = string.Join(" ", operators);
@@ -41,12 +41,12 @@ public class SimpleCalculator
             do
             {
                 Console.Write("Enter the second number: ");
-                validNum2 = double.TryParse(Console.ReadLine(), out num2);
-                if (!validNum2)
+                isValid2 = double.TryParse(Console.ReadLine(), out num2);
+                if (!isValid2)
                 {
                     Console.WriteLine("Invalid input. Please enter a valid number.");
                 }
-            } while (!validNum2);
+            } while (!isValid2);
 
             var result = calculator.PerformCalculation(operation, num1, num2);
 
