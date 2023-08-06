@@ -1,6 +1,6 @@
 namespace Calculator;
 
-public class Calculator
+public class CalculatorOperations
 {
     public double PerformCalculation(string operation, double num1, double num2)
     {
