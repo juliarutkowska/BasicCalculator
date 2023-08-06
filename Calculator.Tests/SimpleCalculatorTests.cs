@@ -7,11 +7,8 @@ public class SimpleCalculatorTests
 
     [Fact]
     public void Sum_of_two_numbers()
-    { 
-        // Act
+    {
         var result = calculator.PerformCalculation("+", 5, 7);
-
-        // Assert
         result.ShouldBe(12);
     }
 
@@ -19,7 +16,6 @@ public class SimpleCalculatorTests
     public void Difference_of_two_numbers()
     {
         var result = calculator.PerformCalculation("-", 10, 3);
-        
         result.ShouldBe(7);
     }
 
@@ -34,8 +30,6 @@ public class SimpleCalculatorTests
     public void Quotient_of_two_numbers()
     {
         var result = calculator.PerformCalculation("/", 30, 3);
-        
         result.ShouldBe(10);
     }
-    
 }
