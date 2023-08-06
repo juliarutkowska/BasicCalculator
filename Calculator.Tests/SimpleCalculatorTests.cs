@@ -3,7 +3,7 @@ namespace Calculator.Tests;
 
 public class SimpleCalculatorTests
 {
-    Calculator calculator = new Calculator();
+    CalculatorOperations calculator = new CalculatorOperations();
 
     [Fact]
     public void Sum_of_two_numbers()
