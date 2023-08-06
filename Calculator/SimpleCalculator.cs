@@ -7,7 +7,7 @@ public class SimpleCalculator
         Console.WriteLine("Welcome to the Basic Calculator!");
         Console.WriteLine();
 
-        var calculator = new Calculator();
+        var calculator = new CalculatorOperations();
 
         while (true)
         {
